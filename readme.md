@@ -60,7 +60,6 @@ Allar síður skulu vera villulausar ef prófaðar með HTML validator.
 * Leturgerðir:
   * Fyrir meginmál: Nunito, Helvetica, Arial, sans-serif
   * Fyrir fyrirsagnir: Domine, Georgia, serif
-* Almennt skal aðeins nota hlutfallslegar einingar í breiddir, nema nota þarf `px` gildi til að útfæra birtingu á dagstíma icon
 
 Nota skal CSS variables sem gefnar eru í `:root` með `var()`.
 
@@ -163,4 +162,4 @@ Myndir frá [Unsplash](https://unsplash.com/):
 * [Annie Spratt](https://unsplash.com/@anniespratt)
 * [Josie Weiss](https://unsplash.com/es/@scarlettweiss)
 
-> Útgáfa 0.1
+> Útgáfa 0.2 (fjarlægja úreltar upplýsingar)
