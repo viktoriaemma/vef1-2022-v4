@@ -1,7 +1,5 @@
 # Vefforritun 1, 2022: Verkefni 4, CSS #2
 
-[Kynning í fyrirlestri](https://youtu.be/).
-
 Setja skal upp viðmót fyrir gefið útlit.
 
 Haldið verður áfram með verkefnið:
@@ -125,7 +123,7 @@ Setja skal upp verkefni á Netlify með því að tengja GitHub repo.
 
 ## Sett fyrir
 
-Verkefni sett fyrir í fyrirlestri mánudaginn 19. september 2022.
+Verkefni sett fyrir mánudaginn 19. september 2022.
 
 ## Skil
 
