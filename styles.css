@@ -13,7 +13,9 @@ html {
 }
 
 /* og látum erfast á allt */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -51,7 +53,9 @@ body {
   font-family: var(--font-family-base);
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   font-family: var(--font-family-heading);
 }
 
@@ -84,7 +88,44 @@ main {
 
 /* Header */
 
+
+.protection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+
+  /* background-color: rgba(255, 255, 255, 0.2);*/
+}
+
+
 header {
+  position: relative;
+  margin-bottom: 2rem;
+  padding-top: 20vh;
+  width: 100%;
+  height: 100vh;
+
+  background: url(myndir/header.jpg) 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+
+
+}
+
+header h1 {
+  position: relative;
+  z-index: 1; 
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+text-align: center;
+color: #ccc;
+
 }
 
 /* TODO */

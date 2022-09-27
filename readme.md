@@ -1,4 +1,4 @@
-# Vefforritun 1, 2022: Verkefni 4, CSS #2
+ # Vefforritun 1, 2022: Verkefni 4, CSS #2
 
 Setja skal upp viðmót fyrir gefið útlit.
 
