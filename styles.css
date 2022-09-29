@@ -25,7 +25,7 @@ html {
   /* Grunn bilið okkar er 1rem == 16px */
   --spacing: 1rem;
   /* Hámarksbreidd á efni */
-  --max-width: 1200px;
+  --max-width: 1400px;
 
   --color-primary: #f0f0f8;
 
@@ -36,13 +36,25 @@ html {
   /* Letur stillingar */
   --font-base-body-px: 16px;
   --font-base-size: 1rem;
-  --font-family-base: 'Nunito', Helvetica, Arial, sans-serif;
-  --font-family-heading: 'Domine', Georgia, serif;
+  --font-family-base: "Nunito", Helvetica, Arial, sans-serif;
+  --font-family-heading: "Domine", Georgia, serif;
 }
 
 /* Leturgerðir */
 
-/* TODO Setja upp leturgerðir */
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-display: swap;
+  src: url(./fonts/Nunito-VariableFont_wght.ttf) format("woff");
+}
+
+@font-face {
+  font-family: "Domine";
+  font-style: normal;
+  font-display: swap;
+  src: url(./fonts/Domine-VariableFont_wght.ttf) format("woff");
+}
 
 /* Almennt */
 
@@ -65,18 +77,28 @@ img {
 
 .button {
   display: inline-block;
-
-  /* TODO útlit á button */
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+  background-color: var(--color-primary);
+  color: #000000;
+  padding: 0.5rem 1.5rem;
+  font-family: var(--font-family-base);
 }
 
 .button-secondary {
-  /* TODO */
+  background-color: rgba(0, 0, 0, 0);
 }
 
 /* Layout */
 
 main {
   margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
   max-width: var(--max-width);
 }
 
@@ -88,52 +110,96 @@ main {
 
 /* Header */
 
+header {
+  display: flex;
+  min-height: 100vh;
+  color: #fff;
+  background-color: skyblue;
+  background-position: 50% 50%;
+  background-attachment: fixed;
+  background: url(myndir/header.jpg) 50% 50%;
+  z-index: 0;
+}
 
-.protection {
+header .protection {
   position: absolute;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   z-index: 1;
-
-  /* background-color: rgba(255, 255, 255, 0.2);*/
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
-
-header {
+header .content {
   position: relative;
-  margin-bottom: 2rem;
-  padding-top: 20vh;
-  width: 100%;
-  height: 100vh;
-
-  background: url(myndir/header.jpg) 50% 50%;
-  background-size: cover;
-  background-attachment: fixed;
-
-
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 2);
+  margin: auto;
+  font-family: var(--font-family-heading);
+  font-size: calc(var(--font-base-size) * 1.5);
+  text-align: center;
 }
 
 header h1 {
-  position: relative;
-  z-index: 1; 
-  margin: 0 auto;
-  margin-bottom: 1rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-
-text-align: center;
-color: #ccc;
-
+  font-size: 4rem;
 }
-
-/* TODO */
 
 /* Upplýsingasvæði */
 
-/* TODO */
+.info-boxes img {
+  flex-direction: column;
+  max-width: 50%;
+  transform: rotate(3deg);
+}
+
+.info {
+  gap: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 2);
+  display: flex;
+  flex-direction: row;
+}
+
+.info-right {
+  flex-direction: row-reverse;
+  align-content: center;
+}
+
+.info-right img {
+  transform: rotate(-3deg);
+}
+
+.kicker {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+}
+
+.info-text {
+  padding: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 2);
+}
 
 /* Cards */
 
-/* TODO */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  max-width: 50%;
+}
+
+.card img {
+  justify-content: flex-start;
+}
+
+.card .button {
+  justify-content: end;
+}
