@@ -89,6 +89,10 @@ img {
   background-color: rgba(0, 0, 0, 0);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Layout */
 
 main {
@@ -114,11 +118,10 @@ header {
   display: flex;
   min-height: 100vh;
   color: #fff;
-  background-color: skyblue;
   background-position: 50% 50%;
-  background-attachment: fixed;
   background: url(myndir/header.jpg) 50% 50%;
-  z-index: 0;
+  background-attachment: fixed;
+
 }
 
 header .protection {
@@ -187,19 +190,28 @@ header h1 {
 .cards {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .card {
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  max-width: 50%;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  width: calc(50% - 1rem);
+  padding: calc(var(--spacing) * 0.75);
+
 }
 
 .card img {
-  justify-content: flex-start;
+  flex-grow: 1;
+  object-fit: cover;
+  max-height: 400px;
+  flex-basis: auto;
 }
 
 .card .button {
-  justify-content: end;
+
 }
+
